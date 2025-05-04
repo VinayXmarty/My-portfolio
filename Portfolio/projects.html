@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Projects</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #1e222a;
+      color: white;
+      scroll-behavior: smooth;
+    }
+
+    #projects {
+      padding: 80px 20px;
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    #projects h2 {
+      text-align: center;
+      font-size: 2.8rem;
+      color: #65ff65;
+      margin-bottom: 60px;
+      animation: slideInDown 1s ease-out;
+    }
+
+    .projects-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 30px;
+    }
+
+    .project-card {
+      background: rgba(255, 255, 255, 0.04);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      border-radius: 16px;
+      backdrop-filter: blur(12px);
+      overflow: hidden;
+      box-shadow: 0 4px 30px rgba(0, 0, 0, 0.2);
+      transform: translateY(50px);
+      opacity: 0;
+      animation: slideFadeUp 1s ease-out forwards;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .project-card:hover {
+      transform: translateY(0) scale(1.03);
+      box-shadow: 0 12px 28px rgba(101, 255, 101, 0.3);
+    }
+
+    .project-card img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+      cursor: zoom-in;
+    }
+
+    .project-card-content {
+      padding: 20px;
+      flex-grow: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .project-card h3 {
+      color: #65ff65;
+      margin-bottom: 12px;
+      font-size: 1.4rem;
+    }
+
+    .project-card p {
+      color: #ccc;
+      font-size: 0.95rem;
+      line-height: 1.7;
+      margin-bottom: 10px;
+    }
+
+    .github-btn {
+      margin-top: auto;
+      align-self: flex-start;
+      padding: 10px 16px;
+      background-color: #65ff65;
+      color: #1e222a;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .github-btn:hover {
+      transform: scale(1.05);
+      box-shadow: 0 0 15px #65ff65;
+      background-color: #59e12f;
+      color: black;
+    }
+
+    .github-btn i {
+      margin-right: 8px;
+    }
+
+    .project-card:nth-child(1) { animation-delay: 0.2s; }
+    .project-card:nth-child(2) { animation-delay: 0.4s; }
+    .project-card:nth-child(3) { animation-delay: 0.6s; }
+
+    @keyframes slideInDown {
+      from { opacity: 0; transform: translateY(-40px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes slideFadeUp {
+      0% { opacity: 0; transform: translateY(50px) scale(0.95); }
+      100% { opacity: 1; transform: translateY(0) scale(1); }
+    }
+
+    /* Lightbox styles */
+    .lightbox-modal {
+      display: none;
+      position: fixed;
+      z-index: 9999;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.9);
+      justify-content: center;
+      align-items: center;
+    }
+
+    .lightbox-modal.active {
+      display: flex;
+    }
+
+    .lightbox-modal img {
+      max-width: 90%;
+      max-height: 80vh;
+      border-radius: 10px;
+      box-shadow: 0 0 20px #65ff65;
+    }
+
+    .lightbox-modal:after {
+      content: '✕';
+      position: absolute;
+      top: 30px;
+      right: 50px;
+      font-size: 2rem;
+      color: white;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+
+  <section id="projects">
+    <h2>My Projects</h2>
+    <div class="projects-grid">
+
+      <div class="project-card">
+        <img src="https://images.squarespace-cdn.com/content/v1/56cbd5842fe13151e10df138/1511370935125-MVLLUATMKP9M4YR3ENU1/videospace+video+search+engine" alt="Vision Project" class="lightbox-img">
+        <div class="project-card-content">
+          <div>
+            <h3>Vision – Multimedia Search Engine</h3>
+            <p>A research-oriented, open-source search engine designed for reverse multimedia search capabilities.</p>
+            <p><strong>Tech Stack:</strong> Python, NodeJS, Intel OpenVino, Selenium, TensorFlow</p>
+          </div>
+          <a href="https://github.com/VinayXmarty" class="github-btn" target="_blank">
+            <i class="fab fa-github"></i> View on GitHub
+          </a>
+        </div>
+      </div>
+
+      <div class="project-card">
+        <img src="https://traffic-signal-control.github.io/img/intellilight.PNG" alt="Traffic Control AI" class="lightbox-img">
+        <div class="project-card-content">
+          <div>
+            <h3>RL-Based Traffic Control System</h3>
+            <p>AI-powered system that improves traffic flow using reinforcement learning and computer vision.</p>
+            <p><strong>Tech Stack:</strong> Python, Raspberry Pi, Arduino, Alibaba Cloud, SUMO, OpenCV</p>
+          </div>
+          <a href="https://github.com/VinayXmarty" class="github-btn" target="_blank">
+            <i class="fab fa-github"></i> View on GitHub
+          </a>
+        </div>
+      </div>
+
+      <div class="project-card">
+        <img src="https://datasciencedojo.com/wp-content/uploads/All-LLM-Blog-Infographics-5.png" alt="Drag and Drop ML Tool" class="lightbox-img">
+        <div class="project-card-content">
+          <div>
+            <h3>Drag-n-Drop ML Environment</h3>
+            <p>A visual tool to build machine learning workflows with drag-and-drop blocks and tutorials.</p>
+            <p><strong>Tech Stack:</strong> Python, JavaScript</p>
+          </div>
+          <a href="https://github.com/VinayXmarty" class="github-btn" target="_blank">
+            <i class="fab fa-github"></i> View on GitHub
+          </a>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Lightbox Viewer -->
+  <div id="lightbox" class="lightbox-modal" onclick="this.classList.remove('active')">
+    <img id="lightbox-img" src="" alt="Preview" />
+  </div>
+
+  <script>
+    const images = document.querySelectorAll('.lightbox-img');
+    const modal = document.getElementById('lightbox');
+    const modalImg = document.getElementById('lightbox-img');
+
+    images.forEach(img => {
+      img.addEventListener('click', () => {
+        modal.classList.add('active');
+        modalImg.src = img.src;
+      });
+    });
+  </script>
+</body>
+</html>

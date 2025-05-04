@@ -1,0 +1,95 @@
+<!-- EXPERIENCE SECTION -->
+<section id="experience">
+  <div class="experience-container">
+    <h2 class="experience-heading">My Aspiration & Experience</h2>
+    <div class="experience-card">
+      <p>
+        I’m a highly motivated individual aiming to grow as a Software Developer. My exploration across domains like full stack development, machine learning, and system design has equipped me with versatile skills and problem-solving ability.
+      </p>
+      <p>
+        I believe that growth comes with opportunity. If given the chance, I’m ready to adapt, learn fast, and contribute meaningfully. I’m not just looking for a job—I’m seeking a platform where I can showcase my capabilities and evolve into a valuable team member.
+      </p>
+    </div>
+  </div>
+</section>
+
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700&display=swap');
+
+  /* Ensure no outer gaps anywhere */
+  html, body {
+    margin: 0;
+    padding: 0;
+    background-color: #1e222a;
+    font-family: 'Outfit', sans-serif;
+    width: 100%;
+  }
+
+  #experience {
+    background-color: #1e222a;
+    width: 100%;
+    min-height: 100vh;
+    padding: 100px 20px;
+    box-sizing: border-box;
+    overflow: hidden;
+  }
+
+  .experience-container {
+    max-width: 1000px;
+    margin: 0 auto;
+    text-align: center;
+    color: #ffffff;
+  }
+
+  .experience-heading {
+    font-size: 2.8rem;
+    font-weight: 700;
+    color: #65ff65;
+    margin-bottom: 60px;
+    animation: slideDown 1s ease-out;
+    text-shadow: 0 0 12px rgba(101, 255, 101, 0.3);
+  }
+
+  .experience-card {
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid rgba(101, 255, 101, 0.2);
+    border-radius: 20px;
+    padding: 40px;
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.25);
+    backdrop-filter: blur(10px);
+    font-size: 1.15rem;
+    line-height: 1.8;
+    color: #dddddd;
+    animation: fadeInUp 1.3s ease forwards;
+    transform: translateY(60px);
+    opacity: 0;
+  }
+
+  .experience-card p {
+    margin-bottom: 20px;
+    text-align: justify;
+  }
+
+  @keyframes slideDown {
+    from { opacity: 0; transform: translateY(-30px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  @keyframes fadeInUp {
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @media (max-width: 768px) {
+    .experience-heading {
+      font-size: 2rem;
+    }
+
+    .experience-card {
+      padding: 30px 20px;
+      font-size: 1rem;
+    }
+  }
+</style>
